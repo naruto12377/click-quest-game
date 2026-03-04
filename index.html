@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Quest - Addictive Idle Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-header">
+            <h1>⚔️ Click Quest</h1>
+            <p class="tagline">The Most Addictive Clicker Game</p>
+        </div>
+
+        <div class="game-stats">
+            <div class="stat-box">
+                <span class="stat-label">💰 Gold</span>
+                <span class="stat-value" id="goldDisplay">0</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">⚡ Power</span>
+                <span class="stat-value" id="powerDisplay">1</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">🎯 Level</span>
+                <span class="stat-value" id="levelDisplay">1</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">💸 Per Second</span>
+                <span class="stat-value" id="perSecondDisplay">0</span>
+            </div>
+        </div>
+
+        <div class="click-section">
+            <button id="clickButton" class="big-click-btn">
+                <span class="click-text">CLICK ME!</span>
+                <span class="click-power">+<span id="clickPowerDisplay">1</span> Gold</span>
+            </button>
+            <p class="click-instruction">Tap or Click to Earn Gold 🖱️</p>
+        </div>
+
+        <div class="upgrades-section">
+            <h2>🛒 Store - Buy Upgrades</h2>
+            <div class="upgrades-grid" id="upgradesContainer">
+                <!-- Upgrades will be dynamically added here -->
+            </div>
+        </div>
+
+        <div class="achievements-section">
+            <h2>🏆 Achievements</h2>
+            <div class="achievements-grid" id="achievementsContainer">
+                <!-- Achievements will be dynamically added here -->
+            </div>
+        </div>
+
+        <div class="controls-section">
+            <button id="saveBtn" class="control-btn save-btn">💾 Save</button>
+            <button id="loadBtn" class="control-btn load-btn">📂 Load</button>
+            <button id="resetBtn" class="control-btn reset-btn">🔄 Reset</button>
+            <button id="settingsBtn" class="control-btn settings-btn">⚙️ Settings</button>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>⚙️ Settings</h2>
+            <div class="setting-item">
+                <label for="soundToggle">🔊 Sound Effects</label>
+                <input type="checkbox" id="soundToggle" checked>
+            </div>
+            <div class="setting-item">
+                <label for="particlesToggle">✨ Particle Effects</label>
+                <input type="checkbox" id="particlesToggle" checked>
+            </div>
+            <div class="setting-item">
+                <label for="autoSaveToggle">💾 Auto-Save</label>
+                <input type="checkbox" id="autoSaveToggle" checked>
+            </div>
+            <p class="save-info" id="saveInfo"></p>
+            <button id="closeSettings" class="control-btn">Close</button>
+        </div>
+    </div>
+
+    <div id="particlesContainer" class="particles-container"></div>
+
+    <script src="game.js"></script>
+</body>
+</html>
